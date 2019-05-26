@@ -64,6 +64,26 @@ int main( ) {
 								   ".bmp");
 	/* ==== 				========					====*/
 
+	/*----      para borrar la memoria solicitada      ---- */
+	delete circle;
+	delete outPutPiso;
+	delete elTableroDeUnTest;
+
+	for ( int i = 1; i <= X; i++) {
+			for ( int j = 1; j <= Y; j++) {
+				for (int jj = 1; jj <= Z; jj++) {
+					if ( -(i-X/2)*(i-X/2)/X-(j-Y/2)*(j-Y/2)/Y +Z > jj ) {
+					unaUbicacionEnTablero[0] = i;
+					unaUbicacionEnTablero[1] = j;
+					unaUbicacionEnTablero[2] = jj;
+					fichita = elTableroDeUnTest->obtenerFicha(unaUbicacionEnTablero);
+					delete fichita;
+					}
+				}
+			}
+		}
+	/* ==== 				========					====*/
+
 	cout << "archivo ejecutado!";
 
 	return 0;
