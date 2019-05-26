@@ -43,25 +43,26 @@ int main( ) {
 			}
 		}
 	}
+	/* ==== 				========					====*/
 
-	/*---- Version para leer las fichas de los jugadores ----*/
+	/*---- Version para leer las fichas de los jugadores----*/
 	ImagenMultiple *circle = new ImagenMultiple();
-	circle->cargarImagenes("/home/hernan/workspace/UnTest/Imagenes/Load/",
+	circle->cargarImagenMultiple("/home/hernan/workspace/UnTest/Imagenes/Load/",
 						   "circle",
 						   cantidadDeJugadores,	// la cantidad de jugadores es la cantidad de imágenes a cargar.
 						   ".bmp");
-
 	/* ==== 				========					====*/
 
-	/*----Version para obtener imágenes de las plantas---- */
+	/*----Version para obtener imágenes de las plantas ---- */
 
 		ImagenMultiple *outPutPiso = new ImagenMultiple();
 
 		outPutPiso->generarVistaEnNivelesXY(circle, elTableroDeUnTest);
 
-		outPutPiso->guardarImagenes("/home/hernan/workspace/UnTest/Imagenes/Load/",
-								   "outputPiso",
+		outPutPiso->guardarImagenes("/home/hernan/workspace/UnTest/Imagenes/Generated/",
+								   "outputPisoNivel",
 								   ".bmp");
+	/* ==== 				========					====*/
 
 	cout << "archivo ejecutado!";
 
