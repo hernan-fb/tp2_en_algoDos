@@ -1,0 +1,7 @@
+﻿consola::validarNumerosCin(int &numero){
+                while (!(cin>> numero)) {
+                    cout<<"el dato ingresado no es numero. Intente de nuevo."<<endl;
+                    cin.clear();                // reseteo el cin para evitar bucle indefinido
+                    cin.ignore(10000, '\n');    // fuente: http://www.cplusplus.com/forum/general/207458/
+                }
+            }

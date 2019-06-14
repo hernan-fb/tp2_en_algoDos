@@ -1,0 +1,6 @@
+﻿Ficha* Tablero::obtenerFicha(int posicion[3]){
+	this->avanzarFilaHasta(posicion[0]);
+	this->avanzarColumnaHasta(posicion[1]);
+	this->avanzarPisoHasta(posicion[2]);
+	return(filas→obtenerCursor()→obtenerCursor()→obtenerCursor()→verContenido() ); //atencion, en la version de la clase ImagenMultiple, se usa directamente la propiedad del struct ficha, porque no tengo clase Celda.cpp.
+}
